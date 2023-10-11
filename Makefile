@@ -17,4 +17,4 @@ clean:
 	find . -type f -path "./*" -name "*.class" -delete
 
 run:
-	java Main
+	java Main S_file.pcap
