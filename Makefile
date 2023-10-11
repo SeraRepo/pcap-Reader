@@ -14,7 +14,7 @@ default: classes
 classes: $(CLASSES:.java=.class)
 
 clean:
-	find . -type f -path "./*/*" -name "*.class" -delete
+	find . -type f -path "./*" -name "*.class" -delete
 
 run:
 	java Main
