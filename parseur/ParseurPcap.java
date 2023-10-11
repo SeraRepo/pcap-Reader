@@ -19,14 +19,14 @@ public class ParseurPcap {
                 int oPacketLenght = calcValueByte(Arrays.copyOfRange(byteArray, packetParser + 12, packetParser + 16));
                 byte[] packetData = Arrays.copyOfRange(byteArray, packetParser + 16, packetParser + cPacketLength);
 
-                packetParser += 16 + cPacketLength;
+                
                 // System.out.println("TimestampsS: " + TimestampS);
                 // System.out.println("TimestampsMs" + TimestampMs);
-
                 System.out.println("cPackentLength: " + cPacketLength);
-                System.out.println("Byte array: " + Arrays.toString(Arrays.copyOfRange(byteArray, packetParser + 8, packetParser + 12)));
-                System.out.println(("Actuem byte: " + packetParser));
                 // System.out.println("oPacketLength" + oPacketLenght);
+
+                parseur.ParseurData.parseData(packetData);
+                packetParser += 16 + cPacketLength;
             }
             // byte[] data = Arrays.copyOfRange(header, 24, byteArray.length);
             // parseur.ParseurData.parseData(data);
